@@ -1,0 +1,51 @@
+<analysisnotebook name="DBN Builder Network" root="diamond">
+<dbnmodel name="diamond">
+<staticproperties><format value="Dynamic Extended XBN" />
+<version value="0.1" />
+<creator value="Selrach" />
+</staticproperties>
+<variables>
+<var id="21fa654a-c994-47df-b14a-4ba4ec16e4c7" name="right" type="discrete" xpos="564" ypos="249" order="0">
+<description></description>
+<stateset>
+<statename>True</statename><statename>False</statename></stateset>
+</var>
+<var id="0b2e6725-6961-40b8-80a6-45f34ef2762b" name="left-bottom" type="discrete" xpos="352" ypos="383" order="5">
+<description></description>
+<stateset>
+<statename>True</statename><statename>False</statename></stateset>
+</var>
+<var id="c531fe18-5d33-4944-a8a7-54300514db84" name="left" type="discrete" xpos="172" ypos="327" order="1">
+<description></description>
+<stateset>
+<statename>True</statename><statename>False</statename></stateset>
+</var>
+<var id="2e6081ba-291c-44fb-914f-34026e724000" name="right-right" type="discrete" xpos="621" ypos="268" order="4">
+<description></description>
+<stateset>
+<statename>True</statename><statename>False</statename></stateset>
+</var>
+<var id="4a4589be-426c-418c-ad8b-6bb59b79f7bf" name="bottom" type="discrete" xpos="339" ypos="371" order="2">
+<description></description>
+<stateset>
+<statename>True</statename><statename>False</statename></stateset>
+</var>
+<var id="c04b69b0-2009-4912-bc89-4f0b7db558e8" name="top" type="discrete" xpos="349" ypos="87" order="3">
+<description></description>
+<stateset>
+<statename>True</statename><statename>False</statename></stateset>
+</var>
+</variables>
+<structure>
+<arc parent="21fa654a-c994-47df-b14a-4ba4ec16e4c7" child="4a4589be-426c-418c-ad8b-6bb59b79f7bf" time="0" />
+<arc parent="21fa654a-c994-47df-b14a-4ba4ec16e4c7" child="2e6081ba-291c-44fb-914f-34026e724000" time="0" />
+<arc parent="0b2e6725-6961-40b8-80a6-45f34ef2762b" child="4a4589be-426c-418c-ad8b-6bb59b79f7bf" time="0" />
+<arc parent="c531fe18-5d33-4944-a8a7-54300514db84" child="4a4589be-426c-418c-ad8b-6bb59b79f7bf" time="0" />
+<arc parent="c531fe18-5d33-4944-a8a7-54300514db84" child="0b2e6725-6961-40b8-80a6-45f34ef2762b" time="0" />
+<arc parent="c04b69b0-2009-4912-bc89-4f0b7db558e8" child="21fa654a-c994-47df-b14a-4ba4ec16e4c7" time="0" />
+<arc parent="c04b69b0-2009-4912-bc89-4f0b7db558e8" child="c531fe18-5d33-4944-a8a7-54300514db84" time="0" />
+</structure>
+<distributions>
+</distributions>
+</dbnmodel>
+</analysisnotebook>

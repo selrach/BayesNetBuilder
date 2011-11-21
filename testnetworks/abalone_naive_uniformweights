@@ -1,0 +1,171 @@
+<analysisnotebook name="DBN Builder Network" root="abalone_naive_uniformweights">
+<dbnmodel name="abalone_naive_uniformweights">
+<staticproperties><format value="Dynamic Extended XBN" />
+<version value="0.1" />
+<creator value="Selrach" />
+</staticproperties>
+<variables>
+<var id="3de4be41-0b18-4bc5-bbfe-9e72ffc8bb80" name="Whole Weight" type="discrete" xpos="127" ypos="258" order="0">
+<description>whole abalone  (gr)</description>
+<stateset>
+<statename>Light</statename><statename>Normal</statename><statename>Heavy</statename></stateset>
+</var>
+<var id="8756c566-c88c-4250-82ab-675f57da56a6" name="Viscera Weight" type="discrete" xpos="699" ypos="155" order="1">
+<description>gut weight (after bleeding) (gr)</description>
+<stateset>
+<statename>Light</statename><statename>Heavy</statename></stateset>
+</var>
+<var id="a35c8696-109e-42cd-844e-166aeed86847" name="Shucked Weight" type="discrete" xpos="526" ypos="339" order="2">
+<description>weight of meat (gr)    </description>
+<stateset>
+<statename>Light</statename><statename>Medium</statename><statename>Heavy</statename></stateset>
+</var>
+<var id="2a66492e-a8b6-4848-9e8f-79aa4ad05025" name="Diameter" type="discrete" xpos="333" ypos="344" order="3">
+<description>perpendicular to length     (mm)</description>
+<stateset>
+<statename>Small</statename><statename>Medium</statename><statename>Large</statename></stateset>
+</var>
+<var id="16ed1092-3104-4406-9fa5-5ab5b5975ac2" name="Height" type="discrete" xpos="240" ypos="287" order="4">
+<description>with meat in shell (mm)</description>
+<stateset>
+<statename>Short</statename><statename>Tall</statename></stateset>
+</var>
+<var id="a6f09d8a-b47c-437f-8efc-066c702b48c6" name="Length" type="discrete" xpos="424" ypos="380" order="5">
+<description>Longest shell measurement (mm)</description>
+<stateset>
+<statename>Short</statename><statename>Medium</statename><statename>Long</statename></stateset>
+</var>
+<var id="b5d993d9-72a8-4c54-b25c-778c3546a5b8" name="Rings" type="discrete" xpos="417" ypos="55" order="6">
+<description></description>
+<stateset>
+<statename>Very Young</statename><statename>Young</statename><statename>Middle Aged</statename><statename>Old</statename><statename>Ancient</statename></stateset>
+</var>
+<var id="6c1185ff-42aa-4e7a-8379-06a333a59081" name="Shell Weight" type="discrete" xpos="680" ypos="223" order="7">
+<description>after being dried (gr)</description>
+<stateset>
+<statename>Light</statename><statename>Heavy</statename></stateset>
+</var>
+<var id="135626a5-796e-42a5-a694-9f1b0f43313a" name="Sex" type="discrete" xpos="669" ypos="269" order="8">
+<description></description>
+<stateset>
+<statename>Male</statename><statename>Female</statename><statename>Infant</statename></stateset>
+</var>
+</variables>
+<structure>
+<arc parent="b5d993d9-72a8-4c54-b25c-778c3546a5b8" child="3de4be41-0b18-4bc5-bbfe-9e72ffc8bb80" time="0" />
+<arc parent="b5d993d9-72a8-4c54-b25c-778c3546a5b8" child="8756c566-c88c-4250-82ab-675f57da56a6" time="0" />
+<arc parent="b5d993d9-72a8-4c54-b25c-778c3546a5b8" child="a35c8696-109e-42cd-844e-166aeed86847" time="0" />
+<arc parent="b5d993d9-72a8-4c54-b25c-778c3546a5b8" child="2a66492e-a8b6-4848-9e8f-79aa4ad05025" time="0" />
+<arc parent="b5d993d9-72a8-4c54-b25c-778c3546a5b8" child="16ed1092-3104-4406-9fa5-5ab5b5975ac2" time="0" />
+<arc parent="b5d993d9-72a8-4c54-b25c-778c3546a5b8" child="a6f09d8a-b47c-437f-8efc-066c702b48c6" time="0" />
+<arc parent="b5d993d9-72a8-4c54-b25c-778c3546a5b8" child="6c1185ff-42aa-4e7a-8379-06a333a59081" time="0" />
+<arc parent="b5d993d9-72a8-4c54-b25c-778c3546a5b8" child="135626a5-796e-42a5-a694-9f1b0f43313a" time="0" />
+</structure>
+<distributions>
+<dist type="CONDITIONAL_TABLE">
+<condset>
+<cond id="b5d993d9-72a8-4c54-b25c-778c3546a5b8" time="0" />
+</condset>
+<private name="3de4be41-0b18-4bc5-bbfe-9e72ffc8bb80" time="0" />
+<dpis>
+<dpi index=" 1"> 0.3333333333333333 0.3333333333333333 0.3333333333333333</dpi>
+<dpi index=" 2"> 0.3333333333333333 0.3333333333333333 0.3333333333333333</dpi>
+<dpi index=" 3"> 0.3333333333333333 0.3333333333333333 0.3333333333333333</dpi>
+<dpi index=" 4"> 0.3333333333333333 0.3333333333333333 0.3333333333333333</dpi>
+<dpi index=" 0"> 0.3333333333333333 0.3333333333333333 0.3333333333333333</dpi>
+</dpis></dist>
+<dist type="CONDITIONAL_TABLE">
+<condset>
+<cond id="b5d993d9-72a8-4c54-b25c-778c3546a5b8" time="0" />
+</condset>
+<private name="8756c566-c88c-4250-82ab-675f57da56a6" time="0" />
+<dpis>
+<dpi index=" 1"> 0.5 0.5</dpi>
+<dpi index=" 2"> 0.5 0.5</dpi>
+<dpi index=" 3"> 0.5 0.5</dpi>
+<dpi index=" 4"> 0.5 0.5</dpi>
+<dpi index=" 0"> 0.5 0.5</dpi>
+</dpis></dist>
+<dist type="CONDITIONAL_TABLE">
+<condset>
+<cond id="b5d993d9-72a8-4c54-b25c-778c3546a5b8" time="0" />
+</condset>
+<private name="a35c8696-109e-42cd-844e-166aeed86847" time="0" />
+<dpis>
+<dpi index=" 1"> 0.3333333333333333 0.3333333333333333 0.3333333333333333</dpi>
+<dpi index=" 2"> 0.3333333333333333 0.3333333333333333 0.3333333333333333</dpi>
+<dpi index=" 3"> 0.3333333333333333 0.3333333333333333 0.3333333333333333</dpi>
+<dpi index=" 4"> 0.3333333333333333 0.3333333333333333 0.3333333333333333</dpi>
+<dpi index=" 0"> 0.3333333333333333 0.3333333333333333 0.3333333333333333</dpi>
+</dpis></dist>
+<dist type="CONDITIONAL_TABLE">
+<condset>
+<cond id="b5d993d9-72a8-4c54-b25c-778c3546a5b8" time="0" />
+</condset>
+<private name="2a66492e-a8b6-4848-9e8f-79aa4ad05025" time="0" />
+<dpis>
+<dpi index=" 1"> 0.3333333333333333 0.3333333333333333 0.3333333333333333</dpi>
+<dpi index=" 2"> 0.3333333333333333 0.3333333333333333 0.3333333333333333</dpi>
+<dpi index=" 3"> 0.3333333333333333 0.3333333333333333 0.3333333333333333</dpi>
+<dpi index=" 4"> 0.3333333333333333 0.3333333333333333 0.3333333333333333</dpi>
+<dpi index=" 0"> 0.3333333333333333 0.3333333333333333 0.3333333333333333</dpi>
+</dpis></dist>
+<dist type="CONDITIONAL_TABLE">
+<condset>
+<cond id="b5d993d9-72a8-4c54-b25c-778c3546a5b8" time="0" />
+</condset>
+<private name="16ed1092-3104-4406-9fa5-5ab5b5975ac2" time="0" />
+<dpis>
+<dpi index=" 1"> 0.5 0.5</dpi>
+<dpi index=" 2"> 0.5 0.5</dpi>
+<dpi index=" 3"> 0.5 0.5</dpi>
+<dpi index=" 4"> 0.5 0.5</dpi>
+<dpi index=" 0"> 0.5 0.5</dpi>
+</dpis></dist>
+<dist type="CONDITIONAL_TABLE">
+<condset>
+<cond id="b5d993d9-72a8-4c54-b25c-778c3546a5b8" time="0" />
+</condset>
+<private name="a6f09d8a-b47c-437f-8efc-066c702b48c6" time="0" />
+<dpis>
+<dpi index=" 1"> 0.3333333333333333 0.3333333333333333 0.3333333333333333</dpi>
+<dpi index=" 2"> 0.3333333333333333 0.3333333333333333 0.3333333333333333</dpi>
+<dpi index=" 3"> 0.3333333333333333 0.3333333333333333 0.3333333333333333</dpi>
+<dpi index=" 4"> 0.3333333333333333 0.3333333333333333 0.3333333333333333</dpi>
+<dpi index=" 0"> 0.3333333333333333 0.3333333333333333 0.3333333333333333</dpi>
+</dpis></dist>
+<dist type="TABLE">
+<condset>
+</condset>
+<private name="b5d993d9-72a8-4c54-b25c-778c3546a5b8" time="0" />
+<dpis>
+<dpi> 0.2 0.2 0.2 0.2 0.2</dpi>
+</dpis>
+</dist>
+<dist type="CONDITIONAL_TABLE">
+<condset>
+<cond id="b5d993d9-72a8-4c54-b25c-778c3546a5b8" time="0" />
+</condset>
+<private name="6c1185ff-42aa-4e7a-8379-06a333a59081" time="0" />
+<dpis>
+<dpi index=" 1"> 0.5 0.5</dpi>
+<dpi index=" 2"> 0.5 0.5</dpi>
+<dpi index=" 3"> 0.5 0.5</dpi>
+<dpi index=" 4"> 0.5 0.5</dpi>
+<dpi index=" 0"> 0.5 0.5</dpi>
+</dpis></dist>
+<dist type="CONDITIONAL_TABLE">
+<condset>
+<cond id="b5d993d9-72a8-4c54-b25c-778c3546a5b8" time="0" />
+</condset>
+<private name="135626a5-796e-42a5-a694-9f1b0f43313a" time="0" />
+<dpis>
+<dpi index=" 1"> 0.3333333333333333 0.3333333333333333 0.3333333333333333</dpi>
+<dpi index=" 2"> 0.3333333333333333 0.3333333333333333 0.3333333333333333</dpi>
+<dpi index=" 3"> 0.3333333333333333 0.3333333333333333 0.3333333333333333</dpi>
+<dpi index=" 4"> 0.3333333333333333 0.3333333333333333 0.3333333333333333</dpi>
+<dpi index=" 0"> 0.3333333333333333 0.3333333333333333 0.3333333333333333</dpi>
+</dpis></dist>
+</distributions>
+</dbnmodel>
+</analysisnotebook>

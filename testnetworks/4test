@@ -1,0 +1,76 @@
+<analysisnotebook name="DBN Builder Network" root="4test">
+<dbnmodel name="4test">
+<staticproperties><format value="Dynamic Extended XBN" />
+<version value="0.1" />
+<creator value="Selrach" />
+</staticproperties>
+<variables>
+<var id="3fa37b95-af91-4436-bf11-6abab0877ee0" name="a" type="discrete" xpos="228" ypos="90" order="2">
+<description></description>
+<stateset>
+<statename>True</statename><statename>False</statename></stateset>
+</var>
+<var id="6bb99328-a0d8-4c03-9c80-0d4742efa5ca" name="b" type="discrete" xpos="113" ypos="190" order="1">
+<description></description>
+<stateset>
+<statename>True</statename><statename>False</statename></stateset>
+</var>
+<var id="09f74316-57d9-4dd9-80aa-4af3aea1ca77" name="c" type="discrete" xpos="256" ypos="288" order="0">
+<description></description>
+<stateset>
+<statename>True</statename><statename>False</statename></stateset>
+</var>
+<var id="17ce13e6-b778-4dd8-a6fc-5e3c7e9ceb52" name="d" type="discrete" xpos="353" ypos="192" order="3">
+<description></description>
+<stateset>
+<statename>True</statename><statename>False</statename></stateset>
+</var>
+</variables>
+<structure>
+<arc parent="3fa37b95-af91-4436-bf11-6abab0877ee0" child="6bb99328-a0d8-4c03-9c80-0d4742efa5ca" time="0" />
+<arc parent="3fa37b95-af91-4436-bf11-6abab0877ee0" child="17ce13e6-b778-4dd8-a6fc-5e3c7e9ceb52" time="0" />
+<arc parent="6bb99328-a0d8-4c03-9c80-0d4742efa5ca" child="09f74316-57d9-4dd9-80aa-4af3aea1ca77" time="0" />
+<arc parent="17ce13e6-b778-4dd8-a6fc-5e3c7e9ceb52" child="09f74316-57d9-4dd9-80aa-4af3aea1ca77" time="0" />
+</structure>
+<distributions>
+<dist type="TABLE">
+<condset>
+</condset>
+<private name="3fa37b95-af91-4436-bf11-6abab0877ee0" time="0" />
+<dpis>
+<dpi> 0.75 0.25</dpi>
+</dpis>
+</dist>
+<dist type="CONDITIONAL_TABLE">
+<condset>
+<cond id="3fa37b95-af91-4436-bf11-6abab0877ee0" time="0" />
+</condset>
+<private name="6bb99328-a0d8-4c03-9c80-0d4742efa5ca" time="0" />
+<dpis>
+<dpi index=" 1"> 0.15 0.85</dpi>
+<dpi index=" 0"> 0.65 0.35</dpi>
+</dpis></dist>
+<dist type="CONDITIONAL_TABLE">
+<condset>
+<cond id="6bb99328-a0d8-4c03-9c80-0d4742efa5ca" time="0" />
+<cond id="17ce13e6-b778-4dd8-a6fc-5e3c7e9ceb52" time="0" />
+</condset>
+<private name="09f74316-57d9-4dd9-80aa-4af3aea1ca77" time="0" />
+<dpis>
+<dpi index=" 0 1"> 0.16666666666666666 0.8333333333333333</dpi>
+<dpi index=" 1 0"> 0.43749999999999994 0.5625</dpi>
+<dpi index=" 1 1"> 0.6428571428571429 0.35714285714285715</dpi>
+<dpi index=" 0 0"> 0.55 0.45</dpi>
+</dpis></dist>
+<dist type="CONDITIONAL_TABLE">
+<condset>
+<cond id="3fa37b95-af91-4436-bf11-6abab0877ee0" time="0" />
+</condset>
+<private name="17ce13e6-b778-4dd8-a6fc-5e3c7e9ceb52" time="0" />
+<dpis>
+<dpi index=" 1"> 0.7857142857142857 0.21428571428571425</dpi>
+<dpi index=" 0"> 0.2692307692307693 0.7307692307692308</dpi>
+</dpis></dist>
+</distributions>
+</dbnmodel>
+</analysisnotebook>

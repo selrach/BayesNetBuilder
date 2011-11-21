@@ -1,0 +1,42 @@
+<analysisnotebook name="DBN Builder Network" root="test">
+<dbnmodel name="test">
+<staticproperties><format value="Dynamic Extended XBN" />
+<version value="0.1" />
+<creator value="Selrach" />
+</staticproperties>
+<variables>
+<var id="5f7580a8-ea0a-4444-92d9-78179fc9a1b0" name="b" type="discrete" xpos="20" ypos="40" order="1">
+<description></description>
+<stateset>
+<statename>True</statename><statename>False</statename></stateset>
+</var>
+<var id="4f4b1e92-63ee-49f7-ab1d-ff38bedd8f9c" name="a" type="discrete" xpos="112" ypos="49" order="0">
+<description></description>
+<stateset>
+<statename>True</statename><statename>False</statename></stateset>
+</var>
+</variables>
+<structure>
+<arc parent="4f4b1e92-63ee-49f7-ab1d-ff38bedd8f9c" child="5f7580a8-ea0a-4444-92d9-78179fc9a1b0" time="0" />
+</structure>
+<distributions>
+<dist type="CONDITIONAL_TABLE">
+<condset>
+<cond id="4f4b1e92-63ee-49f7-ab1d-ff38bedd8f9c" time="0" />
+</condset>
+<private name="5f7580a8-ea0a-4444-92d9-78179fc9a1b0" time="0" />
+<dpis>
+<dpi index=" 1"> 0.75 0.25</dpi>
+<dpi index=" 0"> 0.6153846153846154 0.3846153846153846</dpi>
+</dpis></dist>
+<dist type="TABLE">
+<condset>
+</condset>
+<private name="4f4b1e92-63ee-49f7-ab1d-ff38bedd8f9c" time="0" />
+<dpis>
+<dpi> 0.5833333333333334 0.4166666666666667</dpi>
+</dpis>
+</dist>
+</distributions>
+</dbnmodel>
+</analysisnotebook>

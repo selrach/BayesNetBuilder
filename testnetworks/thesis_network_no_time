@@ -1,0 +1,122 @@
+<analysisnotebook name="DBN Builder Network" root="thesis_network_no_time">
+<dbnmodel name="thesis_network_no_time">
+<staticproperties><format value="Dynamic Extended XBN" />
+<version value="0.1" />
+<creator value="Selrach" />
+</staticproperties>
+<variables>
+<var id="4e807e77-0f8c-41b1-b22c-47c704c5ed7c" name="D" type="discrete" xpos="212" ypos="291" order="1">
+<description></description>
+<stateset>
+<statename>True</statename><statename>False</statename></stateset>
+</var>
+<var id="7e35aa55-441c-4ce9-8770-778e367b0873" name="C" type="discrete" xpos="526" ypos="162" order="0">
+<description></description>
+<stateset>
+<statename>True</statename><statename>False</statename></stateset>
+</var>
+<var id="73598f1c-6aa4-4998-8976-c6c857cc180b" name="F" type="discrete" xpos="365" ypos="202" order="2">
+<description></description>
+<stateset>
+<statename>True</statename><statename>False</statename></stateset>
+</var>
+<var id="45214101-be17-47e6-b807-6c76a40ae3ad" name="B" type="discrete" xpos="234" ypos="138" order="4">
+<description></description>
+<stateset>
+<statename>True</statename><statename>False</statename></stateset>
+</var>
+<var id="910257b5-02a9-4b76-864c-e74958a6523f" name="A" type="discrete" xpos="421" ypos="80" order="3">
+<description></description>
+<stateset>
+<statename>True</statename><statename>False</statename></stateset>
+</var>
+<var id="4208209f-1c38-42a7-975f-9e54f98f34dd" name="G" type="discrete" xpos="354" ypos="279" order="5">
+<description></description>
+<stateset>
+<statename>True</statename><statename>False</statename></stateset>
+</var>
+</variables>
+<structure>
+<arc parent="7e35aa55-441c-4ce9-8770-778e367b0873" child="73598f1c-6aa4-4998-8976-c6c857cc180b" time="0" />
+<arc parent="73598f1c-6aa4-4998-8976-c6c857cc180b" child="4208209f-1c38-42a7-975f-9e54f98f34dd" time="0" />
+<arc parent="45214101-be17-47e6-b807-6c76a40ae3ad" child="4e807e77-0f8c-41b1-b22c-47c704c5ed7c" time="0" />
+<arc parent="45214101-be17-47e6-b807-6c76a40ae3ad" child="73598f1c-6aa4-4998-8976-c6c857cc180b" time="0" />
+<arc parent="910257b5-02a9-4b76-864c-e74958a6523f" child="7e35aa55-441c-4ce9-8770-778e367b0873" time="0" />
+<arc parent="910257b5-02a9-4b76-864c-e74958a6523f" child="4e807e77-0f8c-41b1-b22c-47c704c5ed7c" time="0" />
+<arc parent="910257b5-02a9-4b76-864c-e74958a6523f" child="45214101-be17-47e6-b807-6c76a40ae3ad" time="0" />
+</structure>
+<distributions>
+<dist type="CONDITIONAL_TABLE">
+<condset>
+<cond id="910257b5-02a9-4b76-864c-e74958a6523f" time="0" />
+<cond id="45214101-be17-47e6-b807-6c76a40ae3ad" time="0" />
+</condset>
+<private name="4e807e77-0f8c-41b1-b22c-47c704c5ed7c" time="0" />
+<dpis>
+<dpi index=" 0 0"> 0.4 0.6</dpi>
+<dpi index=" 0 1"> 0.75 0.25</dpi>
+<dpi index=" 1 0"> 0.3125 0.6875</dpi>
+<dpi index=" 1 1"> 0.6551724137931034 0.3448275862068966</dpi>
+</dpis></dist>
+<dist type="CONDITIONAL_TABLE">
+<condset>
+<cond id="910257b5-02a9-4b76-864c-e74958a6523f" time="0" />
+</condset>
+<private name="7e35aa55-441c-4ce9-8770-778e367b0873" time="0" />
+<dpis>
+<dpi index=" 0"> 0.7857142857142857 0.21428571428571425</dpi>
+<dpi index=" 1"> 0.32142857142857145 0.6785714285714286</dpi>
+</dpis></dist>
+<dist type="CONDITIONAL_TABLE">
+<condset>
+<cond id="7e35aa55-441c-4ce9-8770-778e367b0873" time="0" />
+<cond id="45214101-be17-47e6-b807-6c76a40ae3ad" time="0" />
+</condset>
+<private name="73598f1c-6aa4-4998-8976-c6c857cc180b" time="0" />
+<dpis>
+<dpi index=" 0 0"> 0.48672566371681425 0.5132743362831859</dpi>
+<dpi index=" 0 1"> 0.20833333333333334 0.7916666666666666</dpi>
+<dpi index=" 1 0"> 0.13636363636363638 0.8636363636363636</dpi>
+<dpi index=" 1 1"> 0.3125 0.6875</dpi>
+</dpis></dist>
+<dist type="CONDITIONAL_TABLE">
+<condset>
+<cond id="7e35aa55-441c-4ce9-8770-778e367b0873" time="0" />
+<cond id="45214101-be17-47e6-b807-6c76a40ae3ad" time="0" />
+</condset>
+<private name="73598f1c-6aa4-4998-8976-c6c857cc180b" time="1" />
+<dpis>
+<dpi index=" 0 0"> 0.5 0.5</dpi>
+<dpi index=" 0 1"> 0.5 0.5</dpi>
+<dpi index=" 1 0"> 0.5 0.5</dpi>
+<dpi index=" 1 1"> 0.5 0.5</dpi>
+</dpis></dist>
+<dist type="CONDITIONAL_TABLE">
+<condset>
+<cond id="910257b5-02a9-4b76-864c-e74958a6523f" time="0" />
+</condset>
+<private name="45214101-be17-47e6-b807-6c76a40ae3ad" time="0" />
+<dpis>
+<dpi index=" 0"> 0.6875 0.3125</dpi>
+<dpi index=" 1"> 0.43333333333333335 0.5666666666666667</dpi>
+</dpis></dist>
+<dist type="TABLE">
+<condset>
+</condset>
+<private name="910257b5-02a9-4b76-864c-e74958a6523f" time="0" />
+<dpis>
+<dpi> 0.6296296296296295 0.37037037037037035</dpi>
+</dpis>
+</dist>
+<dist type="CONDITIONAL_TABLE">
+<condset>
+<cond id="73598f1c-6aa4-4998-8976-c6c857cc180b" time="0" />
+</condset>
+<private name="4208209f-1c38-42a7-975f-9e54f98f34dd" time="0" />
+<dpis>
+<dpi index=" 0"> 0.7692307692307692 0.23076923076923075</dpi>
+<dpi index=" 1"> 0.3333333333333333 0.6666666666666666</dpi>
+</dpis></dist>
+</distributions>
+</dbnmodel>
+</analysisnotebook>

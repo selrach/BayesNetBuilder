@@ -1,0 +1,61 @@
+<analysisnotebook name="DBN Builder Network" root="3var_Varc_332states">
+<dbnmodel name="3var_Varc_332states">
+<staticproperties><format value="Dynamic Extended XBN" />
+<version value="0.1" />
+<creator value="Selrach" />
+</staticproperties>
+<variables>
+<var id="54bba6e3-95d0-4b3f-821e-61945963334f" name="B" type="discrete" xpos="363" ypos="241" order="1">
+<description></description>
+<stateset>
+<statename>True</statename><statename>False</statename><statename>Maybe</statename></stateset>
+</var>
+<var id="7cb99be6-c977-44bd-b8ba-5771c4b7e409" name="A" type="discrete" xpos="420" ypos="159" order="0">
+<description></description>
+<stateset>
+<statename>True</statename><statename>False</statename><statename>Maybe</statename></stateset>
+</var>
+<var id="16d4fddb-097d-4ac6-a128-f3cbdbcb049b" name="c" type="discrete" xpos="229" ypos="160" order="2">
+<description></description>
+<stateset>
+<statename>True</statename><statename>False</statename></stateset>
+</var>
+</variables>
+<structure>
+<arc parent="7cb99be6-c977-44bd-b8ba-5771c4b7e409" child="54bba6e3-95d0-4b3f-821e-61945963334f" time="0" />
+<arc parent="16d4fddb-097d-4ac6-a128-f3cbdbcb049b" child="54bba6e3-95d0-4b3f-821e-61945963334f" time="0" />
+</structure>
+<distributions>
+<dist type="CONDITIONAL_TABLE">
+<condset>
+<cond id="7cb99be6-c977-44bd-b8ba-5771c4b7e409" time="0" />
+<cond id="16d4fddb-097d-4ac6-a128-f3cbdbcb049b" time="0" />
+</condset>
+<private name="54bba6e3-95d0-4b3f-821e-61945963334f" time="0" />
+<dpis>
+<dpi index=" 0 1"> 0.3333333333333333 0.3333333333333333 0.3333333333333333</dpi>
+<dpi index=" 1 0"> 0.3333333333333333 0.3333333333333333 0.3333333333333333</dpi>
+<dpi index=" 1 1"> 0.3333333333333333 0.3333333333333333 0.3333333333333333</dpi>
+<dpi index=" 2 0"> 0.3333333333333333 0.3333333333333333 0.3333333333333333</dpi>
+<dpi index=" 2 1"> 0.3333333333333333 0.3333333333333333 0.3333333333333333</dpi>
+<dpi index=" 0 0"> 0.3333333333333333 0.3333333333333333 0.3333333333333333</dpi>
+</dpis></dist>
+<dist type="TABLE">
+<condset>
+</condset>
+<private name="7cb99be6-c977-44bd-b8ba-5771c4b7e409" time="0" />
+<dpis>
+<dpi> 0.3333333333333333 0.3333333333333333 0.3333333333333333</dpi>
+</dpis>
+</dist>
+<dist type="TABLE">
+<condset>
+</condset>
+<private name="16d4fddb-097d-4ac6-a128-f3cbdbcb049b" time="0" />
+<dpis>
+<dpi> 0.5 0.5</dpi>
+</dpis>
+</dist>
+</distributions>
+</dbnmodel>
+</analysisnotebook>

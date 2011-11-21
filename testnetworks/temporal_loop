@@ -1,0 +1,52 @@
+<analysisnotebook name="DBN Builder Network" root="temporal_loop">
+<dbnmodel name="temporal_loop">
+<staticproperties><format value="Dynamic Extended XBN" />
+<version value="0.1" />
+<creator value="Selrach" />
+</staticproperties>
+<variables>
+<var id="2264a9b6-1ecd-4377-89a2-b21942cf6424" name="A" type="discrete" xpos="330" ypos="209" order="1">
+<description></description>
+<stateset>
+<statename>True</statename><statename>False</statename></stateset>
+</var>
+<var id="3ea0dcfb-0424-4bf2-9a32-43f229ee4b8f" name="B" type="discrete" xpos="349" ypos="339" order="0">
+<description></description>
+<stateset>
+<statename>True</statename><statename>False</statename></stateset>
+</var>
+</variables>
+<structure>
+<arc parent="2264a9b6-1ecd-4377-89a2-b21942cf6424" child="3ea0dcfb-0424-4bf2-9a32-43f229ee4b8f" time="0" />
+<arc parent="3ea0dcfb-0424-4bf2-9a32-43f229ee4b8f" child="2264a9b6-1ecd-4377-89a2-b21942cf6424" time="1" />
+</structure>
+<distributions>
+<dist type="TABLE">
+<condset>
+</condset>
+<private name="2264a9b6-1ecd-4377-89a2-b21942cf6424" time="0" />
+<dpis>
+<dpi> 0.2 0.8</dpi>
+</dpis>
+</dist>
+<dist type="CONDITIONAL_TABLE">
+<condset>
+<cond id="3ea0dcfb-0424-4bf2-9a32-43f229ee4b8f" time="1" />
+</condset>
+<private name="2264a9b6-1ecd-4377-89a2-b21942cf6424" time="1" />
+<dpis>
+<dpi index=" 1"> 0.9 0.1</dpi>
+<dpi index=" 0"> 0.15 0.85</dpi>
+</dpis></dist>
+<dist type="CONDITIONAL_TABLE">
+<condset>
+<cond id="2264a9b6-1ecd-4377-89a2-b21942cf6424" time="0" />
+</condset>
+<private name="3ea0dcfb-0424-4bf2-9a32-43f229ee4b8f" time="0" />
+<dpis>
+<dpi index=" 1"> 0.7 0.3</dpi>
+<dpi index=" 0"> 0.4 0.6</dpi>
+</dpis></dist>
+</distributions>
+</dbnmodel>
+</analysisnotebook>

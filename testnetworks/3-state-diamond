@@ -1,0 +1,61 @@
+<analysisnotebook name="DBN Builder Network" root="3-state-diamond">
+<dbnmodel name="3-state-diamond">
+<staticproperties><format value="Dynamic Extended XBN" />
+<version value="0.1" />
+<creator value="Selrach" />
+</staticproperties>
+<variables>
+<var id="fb0646b2-2fbc-400d-8c1b-b9fa9a401060" name="D" type="discrete" xpos="325" ypos="247" order="0">
+<description></description>
+<stateset>
+<statename>True</statename><statename>False</statename><statename>Maybe</statename></stateset>
+</var>
+<var id="6283be91-499a-49c2-b976-1cea615b8c6c" name="C" type="discrete" xpos="484" ypos="158" order="1">
+<description></description>
+<stateset>
+<statename>True</statename><statename>False</statename></stateset>
+</var>
+<var id="3841db2a-dae2-4f7d-97b0-85cdf9978caf" name="B" type="discrete" xpos="166" ypos="156" order="2">
+<description></description>
+<stateset>
+<statename>True</statename><statename>False</statename><statename>Maybe</statename></stateset>
+</var>
+</variables>
+<structure>
+<arc parent="6283be91-499a-49c2-b976-1cea615b8c6c" child="fb0646b2-2fbc-400d-8c1b-b9fa9a401060" time="0" />
+<arc parent="3841db2a-dae2-4f7d-97b0-85cdf9978caf" child="fb0646b2-2fbc-400d-8c1b-b9fa9a401060" time="0" />
+</structure>
+<distributions>
+<dist type="CONDITIONAL_TABLE">
+<condset>
+<cond id="6283be91-499a-49c2-b976-1cea615b8c6c" time="0" />
+<cond id="3841db2a-dae2-4f7d-97b0-85cdf9978caf" time="0" />
+</condset>
+<private name="fb0646b2-2fbc-400d-8c1b-b9fa9a401060" time="0" />
+<dpis>
+<dpi index=" 0 0"> 0.1 0.4 0.5</dpi>
+<dpi index=" 0 1"> 0.2 0.3 0.5</dpi>
+<dpi index=" 0 2"> 0.3 0.1 0.6</dpi>
+<dpi index=" 1 0"> 0.7 0.2 0.1</dpi>
+<dpi index=" 1 1"> 0.5 0.3 0.2</dpi>
+<dpi index=" 1 2"> 0.6 0.2 0.2</dpi>
+</dpis></dist>
+<dist type="TABLE">
+<condset>
+</condset>
+<private name="6283be91-499a-49c2-b976-1cea615b8c6c" time="0" />
+<dpis>
+<dpi> 0.4 0.6</dpi>
+</dpis>
+</dist>
+<dist type="TABLE">
+<condset>
+</condset>
+<private name="3841db2a-dae2-4f7d-97b0-85cdf9978caf" time="0" />
+<dpis>
+<dpi> 0.1 0.2 0.7</dpi>
+</dpis>
+</dist>
+</distributions>
+</dbnmodel>
+</analysisnotebook>

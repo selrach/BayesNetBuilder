@@ -1,0 +1,111 @@
+<analysisnotebook name="DBN Builder Network" root="exampleNetwork1">
+<dbnmodel name="exampleNetwork1">
+<staticproperties><format value="Dynamic Extended XBN" />
+<version value="0.1" />
+<creator value="Selrach" />
+</staticproperties>
+<variables>
+<var id="1ef5a5c2-cc47-458c-953f-9c150e317bcb" name="D" type="discrete" xpos="264" ypos="139" order="2">
+<description></description>
+<stateset>
+<statename>X</statename><statename>Y</statename><statename>Z</statename></stateset>
+</var>
+<var id="ee2aca87-edd8-486f-88eb-55067df72a7f" name="C" type="discrete" xpos="106" ypos="144" order="3">
+<description></description>
+<stateset>
+<statename>X</statename><statename>Y</statename></stateset>
+</var>
+<var id="617c692a-a2de-4d79-9849-b4750e3bcc12" name="E" type="discrete" xpos="194" ypos="201" order="6">
+<description></description>
+<stateset>
+<statename>X</statename><statename>Y</statename></stateset>
+</var>
+<var id="bf5128df-c499-413f-ba88-93d1e0c7e413" name="B" type="discrete" xpos="182" ypos="98" order="1">
+<description></description>
+<stateset>
+<statename>X</statename><statename>Y</statename><statename>Z</statename></stateset>
+</var>
+<var id="95e2e5f1-ea7d-406b-9c52-ad8a8509a3f4" name="A" type="discrete" xpos="187" ypos="23" order="0">
+<description></description>
+<stateset>
+<statename>X</statename><statename>Y</statename></stateset>
+</var>
+<var id="0a9c4f87-9c1e-4353-83c3-3aec3940674d" name="F" type="discrete" xpos="336" ypos="202" order="4">
+<description></description>
+<stateset>
+<statename>X</statename><statename>Y</statename></stateset>
+</var>
+</variables>
+<structure>
+<arc parent="1ef5a5c2-cc47-458c-953f-9c150e317bcb" child="0a9c4f87-9c1e-4353-83c3-3aec3940674d" time="0" />
+<arc parent="1ef5a5c2-cc47-458c-953f-9c150e317bcb" child="617c692a-a2de-4d79-9849-b4750e3bcc12" time="0" />
+<arc parent="ee2aca87-edd8-486f-88eb-55067df72a7f" child="617c692a-a2de-4d79-9849-b4750e3bcc12" time="0" />
+<arc parent="bf5128df-c499-413f-ba88-93d1e0c7e413" child="1ef5a5c2-cc47-458c-953f-9c150e317bcb" time="0" />
+<arc parent="bf5128df-c499-413f-ba88-93d1e0c7e413" child="ee2aca87-edd8-486f-88eb-55067df72a7f" time="0" />
+<arc parent="95e2e5f1-ea7d-406b-9c52-ad8a8509a3f4" child="bf5128df-c499-413f-ba88-93d1e0c7e413" time="0" />
+</structure>
+<distributions>
+<dist type="CONDITIONAL_TABLE">
+<condset>
+<cond id="bf5128df-c499-413f-ba88-93d1e0c7e413" time="0" />
+</condset>
+<private name="1ef5a5c2-cc47-458c-953f-9c150e317bcb" time="0" />
+<dpis>
+<dpi index=" 0"> 0.7 0.1 0.2</dpi>
+<dpi index=" 1"> 0.05 0.15 0.8</dpi>
+<dpi index=" 2"> 0.15 0.75 0.1</dpi>
+</dpis></dist>
+<dist type="CONDITIONAL_TABLE">
+<condset>
+<cond id="bf5128df-c499-413f-ba88-93d1e0c7e413" time="0" />
+</condset>
+<private name="ee2aca87-edd8-486f-88eb-55067df72a7f" time="0" />
+<dpis>
+<dpi index=" 0"> 0.4 0.6</dpi>
+<dpi index=" 1"> 0.85 0.15</dpi>
+<dpi index=" 2"> 0.6 0.4</dpi>
+</dpis></dist>
+<dist type="CONDITIONAL_TABLE">
+<condset>
+<cond id="1ef5a5c2-cc47-458c-953f-9c150e317bcb" time="0" />
+<cond id="ee2aca87-edd8-486f-88eb-55067df72a7f" time="0" />
+</condset>
+<private name="617c692a-a2de-4d79-9849-b4750e3bcc12" time="0" />
+<dpis>
+<dpi index=" 0 0"> 0.45 0.55</dpi>
+<dpi index=" 0 1"> 0.05 0.95</dpi>
+<dpi index=" 1 0"> 0.25 0.75</dpi>
+<dpi index=" 1 1"> 0.3 0.7</dpi>
+<dpi index=" 2 0"> 0.85 0.15</dpi>
+<dpi index=" 2 1"> 0.9 0.1</dpi>
+</dpis></dist>
+<dist type="CONDITIONAL_TABLE">
+<condset>
+<cond id="95e2e5f1-ea7d-406b-9c52-ad8a8509a3f4" time="0" />
+</condset>
+<private name="bf5128df-c499-413f-ba88-93d1e0c7e413" time="0" />
+<dpis>
+<dpi index=" 0"> 0.35 0.25 0.4</dpi>
+<dpi index=" 1"> 0.6 0.15 0.25</dpi>
+</dpis></dist>
+<dist type="TABLE">
+<condset>
+</condset>
+<private name="95e2e5f1-ea7d-406b-9c52-ad8a8509a3f4" time="0" />
+<dpis>
+<dpi> 0.75 0.25</dpi>
+</dpis>
+</dist>
+<dist type="CONDITIONAL_TABLE">
+<condset>
+<cond id="1ef5a5c2-cc47-458c-953f-9c150e317bcb" time="0" />
+</condset>
+<private name="0a9c4f87-9c1e-4353-83c3-3aec3940674d" time="0" />
+<dpis>
+<dpi index=" 0"> 0.45 0.55</dpi>
+<dpi index=" 1"> 0.3 0.7</dpi>
+<dpi index=" 2"> 0.2 0.8</dpi>
+</dpis></dist>
+</distributions>
+</dbnmodel>
+</analysisnotebook>

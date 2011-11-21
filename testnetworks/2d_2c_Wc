@@ -1,0 +1,106 @@
+<analysisnotebook name="DBN Builder Network" root="2d_2c_Wc">
+<dbnmodel name="2d_2c_Wc">
+<staticproperties><format value="Dynamic Extended XBN" />
+<version value="0.1" />
+<creator value="Selrach" />
+</staticproperties>
+<variables>
+<var id="51fd539e-4d4d-4a9f-8312-5213dba5d2e6" name="D3" type="discrete" xpos="323" ypos="139" order="0">
+<description></description>
+<stateset>
+<statename>True</statename><statename>False</statename></stateset>
+</var>
+<var id="51de315a-e6a5-4759-8508-1d3b0bf8c65d" name="C2" type="continuous" xpos="206" ypos="193" order="2">
+<description></description>
+</var>
+<var id="b271fc3d-b8ac-41f3-8cb2-58d21c08674a" name="C1" type="continuous" xpos="373" ypos="303" order="1">
+<description></description>
+</var>
+<var id="ce83f21a-dc32-4dc5-bcfc-ce599a800a50" name="D1" type="discrete" xpos="365" ypos="230" order="4">
+<description></description>
+<stateset>
+<statename>True</statename><statename>False</statename><statename>Maybe</statename></stateset>
+</var>
+<var id="4d13e58c-9c0f-4fa9-b2e8-9e7deaa978c2" name="D2" type="discrete" xpos="498" ypos="179" order="3">
+<description></description>
+<stateset>
+<statename>True</statename><statename>False</statename></stateset>
+</var>
+<var id="e98864d2-e5f2-4c7f-bb19-ed3c880ceb70" name="D4" type="discrete" xpos="433" ypos="153" order="5">
+<description></description>
+<stateset>
+<statename>True</statename><statename>False</statename><statename>Maybe</statename></stateset>
+</var>
+</variables>
+<structure>
+<arc parent="51fd539e-4d4d-4a9f-8312-5213dba5d2e6" child="ce83f21a-dc32-4dc5-bcfc-ce599a800a50" time="0" />
+<arc parent="51de315a-e6a5-4759-8508-1d3b0bf8c65d" child="b271fc3d-b8ac-41f3-8cb2-58d21c08674a" time="0" />
+<arc parent="ce83f21a-dc32-4dc5-bcfc-ce599a800a50" child="b271fc3d-b8ac-41f3-8cb2-58d21c08674a" time="0" />
+<arc parent="4d13e58c-9c0f-4fa9-b2e8-9e7deaa978c2" child="b271fc3d-b8ac-41f3-8cb2-58d21c08674a" time="0" />
+<arc parent="e98864d2-e5f2-4c7f-bb19-ed3c880ceb70" child="ce83f21a-dc32-4dc5-bcfc-ce599a800a50" time="0" />
+</structure>
+<distributions>
+<dist type="TABLE">
+<condset>
+</condset>
+<private name="51fd539e-4d4d-4a9f-8312-5213dba5d2e6" time="0" />
+<dpis>
+<dpi> 0.21875 0.78125</dpi>
+</dpis>
+</dist>
+<dist type="GAUSSIAN">
+<condset>
+</condset>
+<private name="51de315a-e6a5-4759-8508-1d3b0bf8c65d" time="0" />
+<dpis>
+<dpi> 3.0 1.1</dpi>
+</dpis>
+</dist>
+<dist type="LINEAR_GAUSSIAN_MIX">
+<condset>
+<cond id="51de315a-e6a5-4759-8508-1d3b0bf8c65d" time="0" />
+<cond id="4d13e58c-9c0f-4fa9-b2e8-9e7deaa978c2" time="0" />
+<cond id="ce83f21a-dc32-4dc5-bcfc-ce599a800a50" time="0" />
+</condset>
+<private name="b271fc3d-b8ac-41f3-8cb2-58d21c08674a" time="0" />
+<dpis>
+<dpi index=" 0 0"> 1.0 0.5 1.3</dpi>
+<dpi index=" 0 1"> 2.0 0.8 1.2</dpi>
+<dpi index=" 0 2"> 3.0 1.0 1.7</dpi>
+<dpi index=" 1 0"> 4.0 -3.0 0.8</dpi>
+<dpi index=" 1 1"> 5.0 -2.0 0.3</dpi>
+<dpi index=" 1 2"> 6.0 -1.0 0.5</dpi>
+</dpis></dist>
+<dist type="CONDITIONAL_TABLE">
+<condset>
+<cond id="51fd539e-4d4d-4a9f-8312-5213dba5d2e6" time="0" />
+<cond id="e98864d2-e5f2-4c7f-bb19-ed3c880ceb70" time="0" />
+</condset>
+<private name="ce83f21a-dc32-4dc5-bcfc-ce599a800a50" time="0" />
+<dpis>
+<dpi index=" 0 0"> 0.125 0.5 0.375</dpi>
+<dpi index=" 0 1"> 0.35714285714285715 0.5 0.14285714285714285</dpi>
+<dpi index=" 0 2"> 0.21428571428571427 0.21428571428571427 0.5714285714285714</dpi>
+<dpi index=" 1 0"> 0.35 0.3 0.35</dpi>
+<dpi index=" 1 1"> 0.45 0.4 0.15</dpi>
+<dpi index=" 1 2"> 0.16666666666666666 0.5 0.3333333333333333</dpi>
+</dpis></dist>
+<dist type="TABLE">
+<condset>
+</condset>
+<private name="4d13e58c-9c0f-4fa9-b2e8-9e7deaa978c2" time="0" />
+<dpis>
+<dpi> 0.35 0.65</dpi>
+</dpis>
+</dist>
+<dist type="TABLE">
+<condset>
+</condset>
+<private name="e98864d2-e5f2-4c7f-bb19-ed3c880ceb70" time="0" />
+<dpis>
+<dpi> 0.3 0.2 0.5</dpi>
+</dpis>
+</dist>
+</distributions>
+</dbnmodel>
+</analysisnotebook>

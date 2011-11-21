@@ -1,0 +1,37 @@
+<analysisnotebook name="DBN Builder Network" root="1-HMM">
+<dbnmodel name="1-HMM">
+<staticproperties><format value="Dynamic Extended XBN" />
+<version value="0.1" />
+<creator value="Selrach" />
+</staticproperties>
+<variables>
+<var id="c2fdd59e-66ef-44ec-864f-8ed61ed9fa9a" name="A" type="discrete" xpos="404" ypos="201" order="0">
+<description></description>
+<stateset>
+<statename>True</statename><statename>False</statename></stateset>
+</var>
+</variables>
+<structure>
+<arc parent="c2fdd59e-66ef-44ec-864f-8ed61ed9fa9a" child="c2fdd59e-66ef-44ec-864f-8ed61ed9fa9a" time="1" />
+</structure>
+<distributions>
+<dist type="TABLE">
+<condset>
+</condset>
+<private name="c2fdd59e-66ef-44ec-864f-8ed61ed9fa9a" time="0" />
+<dpis>
+<dpi> 0.7 0.3</dpi>
+</dpis>
+</dist>
+<dist type="CONDITIONAL_TABLE">
+<condset>
+<cond id="c2fdd59e-66ef-44ec-864f-8ed61ed9fa9a" time="1" />
+</condset>
+<private name="c2fdd59e-66ef-44ec-864f-8ed61ed9fa9a" time="1" />
+<dpis>
+<dpi index=" 1"> 0.7 0.3</dpi>
+<dpi index=" 0"> 0.4 0.6</dpi>
+</dpis></dist>
+</distributions>
+</dbnmodel>
+</analysisnotebook>
